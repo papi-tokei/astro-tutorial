@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import VueSample from "../components/Sample.vue";
+
+const URL =
+  "https://api.open-meteo.com/v1/forecast?latitude=35.01&longitude=135.76&current_weather=true";
+const response = await fetch(URL);
+const data = await response.json();
+const currentTemperature = data.current_weather.temperature;
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <p>現在の天気: {currentTemperature} ℃</p>
+  </main>
+  <VueSample client:load />
+</Layout>

@@ -6,7 +6,6 @@ const { post } = Astro.props;
 
 <a class="post-preview__link fade-in" href={post.url}>
   <article class="post-preview__article">
-    <!-- Hopefully we'll be able to use Astro's image integration for this soon -->
     <picture>
       <source srcset={`${post.frontmatter.image}.webp`} type="image/webp" />
       <img
