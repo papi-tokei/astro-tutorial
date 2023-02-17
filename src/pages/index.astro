@@ -13,9 +13,6 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 <Layout title="Welcome to Astro.">
   <main>
     <Container>
-      <div class="home-hero-text__container">
-        <h1 class="">初めてのブログ</h1>
-      </div>
       <BlogPostsList posts={posts} />
     </Container>
   </main>
